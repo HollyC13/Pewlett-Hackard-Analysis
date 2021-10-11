@@ -97,9 +97,6 @@ ON (e.emp_no = ti.emp_no)
 WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 ORDER BY e.emp_no;
 
-SELECT * FROM retirement_titles;
-
-
 
 -- For Challenge - table with unique titles
 -- Use Dictinct with Orderby to remove duplicate rows
@@ -109,21 +106,9 @@ FROM retirement_titles AS rt
 ORDER BY rt.emp_no, rt.to_date DESC;
 
 
-
-
-
 -- Number of employees retiring by job title
 SELECT COUNT (title), title
 INTO retiring_titles
 FROM unique_titles
 GROUP BY title
 ORDER BY count DESC;
-
-
-
-
-
-
-
-
-
